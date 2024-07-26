@@ -4,7 +4,7 @@ let size;
 
 function setup() {
   angleMode(DEGREES);
-  createCanvas(800, 800, WEBGL);
+  createCanvas(windowWidth, windowHeight, WEBGL);
   points = [];
   b = 0;
   size = 10;
@@ -15,6 +15,7 @@ function draw() {
   background(220);
   orbitControl();
   strokeWeight(0.2);
+  stroke(color(50,50,150))
 
   for (let a = 0; a < size * 36; a++) {
     points[a] = sin(10 * (a - b));
@@ -36,4 +37,8 @@ function draw() {
     pop();
   }
   b++;
+}
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
 }
