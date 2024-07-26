@@ -8,14 +8,14 @@ function setup() {
   points = [];
   b = 0;
   size = 10;
-  camera(0, size * -10 - 25, size * 20 + 50);
+  camera(0, size * -15 - 25, size * 30 + 50);
 }
 
 function draw() {
   background(220);
   orbitControl();
   strokeWeight(0.2);
-  stroke(color(50,50,150))
+  stroke(color("#03A9F4"))
 
   for (let a = 0; a < size * 36; a++) {
     points[a] = sin(10 * (a - b));
